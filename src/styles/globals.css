@@ -101,7 +101,7 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
+  --ring: oklch(43.049% 0.1126 262.638);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -115,13 +115,34 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+--tw-shadow: 0 0 #0000;
+  --tw-shadow-cl: 0 0 20px hsla(0, 0%, 100%, .25);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  .card-round {
+    @apply px-5 py-4 rounded-3xl;
+  }
+
+  .text-off {
+    @apply text-sm -ms-1.5 text-gray-400;
+  }
+}
+
+.shadow {
+  box-shadow: var(--tw-shadow, 0 0 #0000), var(--tw-shadow, 0 0 #0000), var(--tw-shadow-cl);
+}
+
+.stroke-primary-dark {
+  stroke: rgb(255, 255, 255, 1);
 }
