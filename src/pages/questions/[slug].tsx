@@ -17,10 +17,15 @@ import TagCard from '@/components/features/TagCard';
 import { mockRelatedQuestion } from '@/mock/related';
 import RelatedQuestionCard from '@/components/features/question/RelatedQuestionCard';
 
+import type { Comment } from '@/types/comment';
+import { mockComment } from '@/mock/question';
+import CommentCard from '@/components/features/question/CommentCard';
+
 export default function QuestionPage() {
   const question: Question = mockQuestion;
   const tag: Tag[] = mockTag;
   const relatedQuestionCard: Question[] = mockRelatedQuestion;
+  const comment: Comment[] = mockComment;
 
   return (
     <>
@@ -38,6 +43,9 @@ export default function QuestionPage() {
 
         <CenterColumn>
           <QuestionCard question={question} />
+
+          <h2 className='text-xl font-medium mb-2'>Comments</h2>
+          <CommentCard comments={comment} />
         </CenterColumn>
 
         <RightColumn>
