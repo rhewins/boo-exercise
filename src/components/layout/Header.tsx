@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className='h-16 px-4 pe-5 ps-[1.375rem] py-5 flex gap-x-3 items-center'>
+    <header className='fixed top-0 left-0 w-full h-16 px-4 pe-5 ps-[1.375rem] py-5 flex gap-x-3 items-center bg-black'>
       <button id='hamburger' className='cursor-pointer'>
         <Image src='/icons/drawer.svg' alt='Drawer' width={20} height={20} />
       </button>

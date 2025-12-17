@@ -15,7 +15,7 @@ export default function Page({ children }: { children: ReactNode }) {
         </aside>
 
         {/* Page Content */}
-        <main className='flex-1 px-4 lg:px-8 py-6'>
+        <main className='flex-1 px-4 lg:px-8 py-6 mt-[50px]'>
           <div className='grid grid-cols-1 lg:grid-cols-[30%_35%_30%] gap-[40]'>
             {children}
           </div>
