@@ -5,12 +5,18 @@ import {
   CenterColumn,
   RightColumn,
 } from '@/components/layout/TripleColumns';
+
 import type { Question } from '@/types/question';
 import { mockQuestion } from '@/mock/question';
 import QuestionCard from '@/components/features/question/QuestionCard';
 
+import type { Tag } from '@/types/tag';
+import { mockTag } from '@/mock/tag';
+import TagCard from '@/components/features/TagCard';
+
 export default function QuestionPage() {
   const question: Question = mockQuestion;
+  const tag: Tag[] = mockTag;
 
   return (
     <>
@@ -22,10 +28,14 @@ export default function QuestionPage() {
       </Head>
 
       <Page>
-        <LeftColumn>Left</LeftColumn>
+        <LeftColumn>
+          <TagCard tags={tag} />
+        </LeftColumn>
+
         <CenterColumn>
           <QuestionCard question={question} />
         </CenterColumn>
+
         <RightColumn>Right</RightColumn>
       </Page>
     </>
