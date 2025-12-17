@@ -1,7 +1,17 @@
 import Head from 'next/head';
 import Page from '@/components/layout/Page';
+import {
+  LeftColumn,
+  CenterColumn,
+  RightColumn,
+} from '@/components/layout/TripleColumns';
+import type { Question } from '@/types/question';
+import { mockQuestion } from '@/mock/question';
+import QuestionCard from '@/components/features/question/QuestionCard';
 
 export default function QuestionPage() {
+  const question: Question = mockQuestion;
+
   return (
     <>
       <Head>
@@ -12,7 +22,11 @@ export default function QuestionPage() {
       </Head>
 
       <Page>
-        This is the main page
+        <LeftColumn>Left</LeftColumn>
+        <CenterColumn>
+          <QuestionCard question={question} />
+        </CenterColumn>
+        <RightColumn>Right</RightColumn>
       </Page>
     </>
   );
