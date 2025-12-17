@@ -21,6 +21,8 @@ import type { Comment } from '@/types/comment';
 import { mockComment } from '@/mock/question';
 import CommentCard from '@/components/features/question/CommentCard';
 
+import InputCard from '@/components/features/question/InputCard';
+
 export default function QuestionPage() {
   const question: Question = mockQuestion;
   const tag: Tag[] = mockTag;
@@ -43,6 +45,8 @@ export default function QuestionPage() {
 
         <CenterColumn>
           <QuestionCard question={question} />
+
+          <InputCard />
 
           <h2 className='text-xl font-medium mb-2'>Comments</h2>
           <CommentCard comments={comment} />
