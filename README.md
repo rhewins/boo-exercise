@@ -122,3 +122,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Time Spent
+Start date: 17 December 2025
+Start time: 11.00 am
+End time: 03.00 pm
+
+## What's Completed
+- Use Frontend framework Next.js 
+- Tailwind as CSS framework
+- Mobile responsive
+- Implement Pages Router
+- Mock data needed
+- Reasoning project folder structure
